@@ -27,7 +27,7 @@ class Cart:
         self.save()
 
     def save(self):
-        # помечаю сессию изменненой для сохранности
+        # помечаю сессию измененной для сохранности
         self.session.modified = True
 
     def remove(self, product):
@@ -36,6 +36,7 @@ class Cart:
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
+
 
     def __iter__(self):
         # прокручиваю позиции товара в цикле и получаю товар из базы данных
